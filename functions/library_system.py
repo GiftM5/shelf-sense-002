@@ -17,13 +17,17 @@ def add_book(title, author):
     """
     # TODO: Append the book's title and author to the database file
     with open(DATABASE_FILE,"w") as Database:
-        Database.write("")
+        Database.write("To Kill a Mockingbird,Harper Lee")
 
-    Database = Database
-    print(Database) 
+    Database = str(Database)
+    Database = Database.split()
+    title = Database[0]
+    author = Database[1]
+    
+     
 
         
-add_book("To Kill a Mockingbird","Harper Lee")
+print(add_book("To Kill a Mockingbird","Harper Lee"))
 
 
 def search_book(title):
